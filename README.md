@@ -6,12 +6,12 @@ Indexes NFTs on the Sparks platform.
 
 **First time only**
 ```ssh
-yarn install
+pnpm install
 ```
 
 ```ssh
-yarn prepare:<network>
-yarn codegen
-yarn build
-yarn deploy:<network>
+pnpm prepare:<network>
+pnpm codegen
+pnpm build
+pnpm deploy:<network>
 ```
