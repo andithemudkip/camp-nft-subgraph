@@ -67,3 +67,4 @@ build
 generated
 
 yarn.lock
+pnpm-lock.yaml

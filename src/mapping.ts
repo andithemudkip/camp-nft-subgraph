@@ -33,10 +33,10 @@ export function handleTransfer(ev: TransferEvent): void {
 
   if (token == null) {
     token = new Token(ev.params.tokenId.toString());
-    token.owner = to.id;
     token.tokenID = ev.params.tokenId;
     const tokenContract = CampNFTABI.bind(ev.address);
     token.tokenURI = tokenContract.tokenURI(ev.params.tokenId);
-    token.save();
   }
+  token.owner = to.id;
+  token.save();
 }
