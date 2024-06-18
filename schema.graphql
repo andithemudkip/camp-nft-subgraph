@@ -1,0 +1,12 @@
+type Token @entity {
+  id: ID!
+  tokenID: BigInt!
+  tokenURI: String!
+  owner: Account!
+}
+
+type Account @entity {
+  id: ID!
+  tokens: [Token!]! @derivedFrom(field: "owner")
+  tokensOwned: BigInt!
+}

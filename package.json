@@ -1,0 +1,20 @@
+{
+    "name": "sparks-subgraph",
+    "license": "UNLICENSED",
+    "scripts": {
+        "codegen": "graph codegen",
+        "build": "graph build",
+        "prepare:camp": "mustache config/camp.json subgraph.template.yaml > subgraph.yaml",
+        "deploy:camp": "graph deploy --ipfs https://api.thegraph.com/ipfs/ --node http://165.227.151.208:8020/ camp-nft-app",
+        "create-local": "graph create --node http://localhost:8020/ camp-nft-app",
+        "remove-local": "graph remove --node http://localhost:8020/ camp-nft-app",
+        "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 camp-nft-app"
+    },
+    "dependencies": {
+        "@graphprotocol/graph-cli": "0.51.0",
+        "@graphprotocol/graph-ts": "0.31.0"
+    },
+    "devDependencies": {
+        "mustache": "^4.0.1"
+    }
+}
